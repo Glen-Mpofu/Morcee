@@ -11,7 +11,9 @@ export const Colors = {
         background: '#0d1117',     // Deep slate gray (GitHub dark)
         navBackground: '#161b22',  // Slightly lighter gray for navs
         uiBackground: '#1f2937',
-        imageColor: '#00bcd4'    // Neutral dark blue-gray for UI elements
+        imageColor: '#00bcd4',   // Neutral dark blue-gray for UI elements
+        linkBorderBottomColor: '#f9fafb',
+    
     },
 
     light: {
@@ -20,6 +22,7 @@ export const Colors = {
         background: '#f9fafb',     // Light grayish background
         navBackground: '#ffffff',  // Pure white for navs
         uiBackground: '#e5e7eb',    // Soft gray for cards, inputs, etc.
-        imageColor: '#0284c7' 
+        imageColor: '#0284c7', 
+        linkBorderBottomColor: '#0d1117'
     }
 }

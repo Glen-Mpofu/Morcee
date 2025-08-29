@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View, Image, useColorScheme } from 'react-native'
-import { Link } from 'expo-router'
+import { Pressable } from 'react-native';
 import { Colors } from '../constants/Colors';
 
 //themed components
 import ThemedView from '../components/ThemedView';
 import ThemedText from '../components/ThemedText';
+import ThemedLink from '../components/ThemedLink';
+import ThemedButton from '../components/ThemedButton';
 
 const Home = () => {
     const colorScheme = useColorScheme();
@@ -18,13 +20,19 @@ const Home = () => {
         </ThemedText>
         <ThemedText style = {[styles.title, {color: theme.text}]}>Morcee</ThemedText>
         
+        <ThemedLink href={"/translate"}>
+            <ThemedButton>
+                Translate
+            </ThemedButton>
+        </ThemedLink>
+
         <View style = {styles.linkView}>
-            <Link href={ "/about" } style = {[styles.link, {color: theme.text}]}>
+            <ThemedLink href={ "/about" } >
                 <ThemedText>About</ThemedText>
-            </Link>
-            <Link href={ "/contact" } style = {[styles.link, {color: theme.text}]}>
+            </ThemedLink>
+            <ThemedLink href={ "/contact" } >
                 <ThemedText>Contact</ThemedText>
-            </Link>
+            </ThemedLink>
         </View>
     </ThemedView>
   )
@@ -57,12 +65,7 @@ const styles = StyleSheet.create({
     width: 150,
     borderRadius: 50,
   },
-  link:{
-    marginVertical: 10,
-    borderBottomWidth: 1,
-    margin: 5
-  },
   linkView: {
     flexDirection: 'row',
-  }
+  },
 })
