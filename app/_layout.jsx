@@ -13,9 +13,12 @@ const RootLayout = () => {
         Exo: require("../assets/fonts/Exo2-VariableFont_wght.ttf"),
         SpaceGrotesk: require("../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
     })
+
+    if (!loaded) return null;
+    
   return (   
     <>
-        <StatusBar value="auto" />
+        <StatusBar style="auto" />
         <Stack screenOptions={{
             headerStyle: {backgroundColor: theme.navBackground}, //color of the header
             headerTintColor: theme.text, //color of the text
@@ -28,9 +31,8 @@ const RootLayout = () => {
             <Stack.Screen name = "about" options={{
                 title: 'About'
             }}/>
-
-            <Stack.Screen name = "contact" options={{
-                title: 'Contact'
+            <Stack.Screen name = "translate" options={{
+                title: 'Translate', headerShown: false
             }}/>
         </Stack>
     </>
